@@ -4,6 +4,7 @@ var copyBtn = document.querySelector("#copy");
 
 // Write password to the #password input
 function generatePassword() {
+  // Password length definition
   var passLength = prompt('Enter requested password length\nMinimum length should be 8\nMaximum length should be 128');
   if (passLength === null) {
     alert('Exiting program');
@@ -21,7 +22,7 @@ function generatePassword() {
       }
     }
   }
-  
+  // Lowercase character selection
   var lowerVal = prompt('Include lowercase characters?\nEnter "Yes" or "No"', 'Yes').toLowerCase();
   if (lowerVal === null) {
     alert('Exiting program');
@@ -36,7 +37,7 @@ function generatePassword() {
       }
     }
   }
-
+  // Uppercase character selection
   var upperVal = prompt('Include uppercase characters?\nEnter "Yes" or "No"', 'Yes').toLowerCase();
   if (upperVal === null) {
     alert('Exiting program');
@@ -51,7 +52,7 @@ function generatePassword() {
       }
     }
   }
-
+  // Number selection
   var numVal = prompt('Include numbers?\nEnter "Yes" or "No"', 'Yes').toLowerCase();
   if (numVal === null) {
     alert('Exiting program');
@@ -66,7 +67,7 @@ function generatePassword() {
       }
     }
   }
-
+  // Special character selection
   var spcVal = prompt('Include special characters?\nEnter "Yes" or "No"', 'Yes').toLowerCase();
   if (spcVal === null) {
     alert('Exiting program');
@@ -81,11 +82,11 @@ function generatePassword() {
       }
     }
   }
-
+  // Create character string unless no criteria selected
   if (lowerVal === 'no' && upperVal === 'no' && numVal === 'no' && spcVal === 'no') {
     return 'No password criteria selected'
   } else {
-    var passChar = '';
+    let passChar = '';
     if (lowerVal === 'yes') {
       passChar += 'abcdefghijklmnopqrstuvwxyz';
     }
@@ -99,7 +100,7 @@ function generatePassword() {
       passChar += '!\"#$%\&()*+\',-./:;<=>?@[\\]^_`{}|~';
     }
   }
-
+  // Creates password based on character string
   let result = '';
   const charLength = passChar.length;
   for (let i = 0; i < passLength; i++) {
@@ -116,6 +117,7 @@ function writePassword() {
 
 }
 
+// Copy password to clipboard
 function clipboardCopy() {
   var copyText = document.getElementById("password");
 
