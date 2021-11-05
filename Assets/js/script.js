@@ -1,5 +1,6 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
+var copyBtn = document.querySelector("#copy");
 
 // Write password to the #password input
 function generatePassword() {
@@ -106,5 +107,14 @@ function writePassword() {
 
 }
 
+function clipboardCopy() {
+  var copyText = document.getElementById("password");
+
+  copyText.select();
+  document.execCommand('copy');
+  alert('Copied password!');
+}
+
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+copyBtn.addEventListener("click", clipboardCopy);
