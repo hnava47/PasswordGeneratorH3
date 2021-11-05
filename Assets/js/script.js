@@ -25,62 +25,74 @@ function generatePassword() {
     }
   }
   // Lowercase character selection
-  var lowerVal = prompt('Include lowercase characters?\nEnter "Yes" or "No"', 'Yes').toLowerCase();
+  var lowerVal = prompt('Include lowercase characters?\nEnter "Yes" or "No"', 'Yes');
   if (lowerVal === null) {
     alert('Exiting program');
     return cancelPhrase;
   } else {
+    lowerVal = lowerVal.toLowerCase();
     while (lowerVal !== 'yes' && lowerVal !== 'no') {
       alert('Invalid entry! Value must be "Yes" or "No"');
-      var lowerVal = prompt('Include lowercase characters?\nEnter "Yes" or "No"', 'Yes').toLowerCase();
+      lowerVal = prompt('Include lowercase characters?\nEnter "Yes" or "No"', 'Yes');
       if (lowerVal === null) {
         alert('Exiting program');
         return cancelPhrase;
+      } else {
+        lowerVal = lowerVal.toLowerCase();
       }
     }
   }
   // Uppercase character selection
-  var upperVal = prompt('Include uppercase characters?\nEnter "Yes" or "No"', 'Yes').toLowerCase();
+  var upperVal = prompt('Include uppercase characters?\nEnter "Yes" or "No"', 'Yes');
   if (upperVal === null) {
     alert('Exiting program');
     return cancelPhrase;
   } else {
+    upperVal = upperVal.toLowerCase();
     while (upperVal !== 'yes' && upperVal !== 'no') {
       alert('Invalid entry! Value must be "Yes" or "No"');
-      var upperVal = prompt('Include uppercase characters?\nEnter "Yes" or "No"', 'Yes').toLowerCase();
+      upperVal = prompt('Include uppercase characters?\nEnter "Yes" or "No"', 'Yes');
       if (upperVal === null) {
         alert('Exiting program');
         return cancelPhrase;
+      } else {
+        upperVal = upperVal.toLowerCase();
       }
     }
   }
   // Number selection
-  var numVal = prompt('Include numbers?\nEnter "Yes" or "No"', 'Yes').toLowerCase();
+  var numVal = prompt('Include numbers?\nEnter "Yes" or "No"', 'Yes');
   if (numVal === null) {
     alert('Exiting program');
     return cancelPhrase;
   } else {
+    numVal = numVal.toLowerCase();
     while (numVal !== 'yes' && numVal !== 'no') {
       alert('Invalid entry! Value must be "Yes" or "No"');
-      var numVal = prompt('Include numbers?\nEnter "Yes" or "No"', 'Yes').toLowerCase();
+      numVal = prompt('Include numbers?\nEnter "Yes" or "No"', 'Yes');
       if (numVal === null) {
         alert('Exiting program');
         return cancelPhrase;
+      } else {
+        numVal = numVal.toLowerCase();
       }
     }
   }
   // Special character selection
-  var spcVal = prompt('Include special characters?\nEnter "Yes" or "No"', 'Yes').toLowerCase();
+  var spcVal = prompt('Include special characters?\nEnter "Yes" or "No"', 'Yes');
   if (spcVal === null) {
     alert('Exiting program');
     return cancelPhrase;
   } else {
+    spcVal = spcVal.toLowerCase();
     while (spcVal !== 'yes' && spcVal !== 'no') {
       alert('Invalid entry! Value must be "Yes" or "No"');
-      var spcVal = prompt('Include special characters?\nEnter "Yes" or "No"', 'Yes').toLowerCase();
+      spcVal = prompt('Include special characters?\nEnter "Yes" or "No"', 'Yes');
       if (spcVal === null) {
         alert('Exiting program');
         return cancelPhrase;
+      } else {
+        spcVal = spcVal.toLowerCase();
       }
     }
   }
