@@ -21,6 +21,7 @@ function generatePassword() {
       }
     }
   }
+  
   var lowerVal = prompt('Include lowercase characters?\nEnter "Yes" or "No"', 'Yes').toLowerCase();
   if (lowerVal === null) {
     alert('Exiting program');
@@ -35,6 +36,7 @@ function generatePassword() {
       }
     }
   }
+
   var upperVal = prompt('Include uppercase characters?\nEnter "Yes" or "No"', 'Yes').toLowerCase();
   if (upperVal === null) {
     alert('Exiting program');
@@ -49,6 +51,7 @@ function generatePassword() {
       }
     }
   }
+
   var numVal = prompt('Include numbers?\nEnter "Yes" or "No"', 'Yes').toLowerCase();
   if (numVal === null) {
     alert('Exiting program');
@@ -63,6 +66,7 @@ function generatePassword() {
       }
     }
   }
+
   var spcVal = prompt('Include special characters?\nEnter "Yes" or "No"', 'Yes').toLowerCase();
   if (spcVal === null) {
     alert('Exiting program');
@@ -77,18 +81,23 @@ function generatePassword() {
       }
     }
   }
-  var passChar = '';
-  if (lowerVal === 'yes') {
-    passChar += 'abcdefghijklmnopqrstuvwxyz';
-  }
-  if (upperVal === 'yes') {
-    passChar += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-  }
-  if (numVal === 'yes') {
-    passChar += '0123456789';
-  }
-  if (spcVal === 'yes') {
-    passChar += '!\"#$%\&()*+\',-./:;<=>?@[\\]^_`{}|~';
+
+  if (lowerVal === 'no' && upperVal === 'no' && numVal === 'no' && spcVal === 'no') {
+    return 'No password criteria selected'
+  } else {
+    var passChar = '';
+    if (lowerVal === 'yes') {
+      passChar += 'abcdefghijklmnopqrstuvwxyz';
+    }
+    if (upperVal === 'yes') {
+      passChar += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    }
+    if (numVal === 'yes') {
+      passChar += '0123456789';
+    }
+    if (spcVal === 'yes') {
+      passChar += '!\"#$%\&()*+\',-./:;<=>?@[\\]^_`{}|~';
+    }
   }
 
   let result = '';
