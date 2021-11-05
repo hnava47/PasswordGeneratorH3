@@ -4,11 +4,13 @@ var copyBtn = document.querySelector("#copy");
 
 // Write password to the #password input
 function generatePassword() {
+  var cancelPhrase = 'Canceled password generator';
+
   // Password length definition
   var passLength = prompt('Enter requested password length\nMinimum length should be 8\nMaximum length should be 128');
   if (passLength === null) {
     alert('Exiting program');
-    return 'Canceled password generator';
+    return cancelPhrase;
   } else {
     var passLength = parseInt(passLength, 10);
     while (passLength < 8 || passLength > 128 || isNaN(passLength)) {
@@ -16,7 +18,7 @@ function generatePassword() {
       var passLength = prompt('Enter requested password length\nMinimum length should be 8\nMaximum length should be 128');
       if (passLength === null) {
         alert('Exiting program');
-        return 'Canceled password generator';
+        return cancelPhrase;
       } else {
         var passLength = parseInt(passLength, 10)
       }
@@ -26,14 +28,14 @@ function generatePassword() {
   var lowerVal = prompt('Include lowercase characters?\nEnter "Yes" or "No"', 'Yes').toLowerCase();
   if (lowerVal === null) {
     alert('Exiting program');
-    return 'Canceled password generator';
+    return cancelPhrase;
   } else {
     while (lowerVal !== 'yes' && lowerVal !== 'no') {
       alert('Invalid entry! Value must be "Yes" or "No"');
       var lowerVal = prompt('Include lowercase characters?\nEnter "Yes" or "No"', 'Yes').toLowerCase();
       if (lowerVal === null) {
         alert('Exiting program');
-        return 'Canceled password generator';
+        return cancelPhrase;
       }
     }
   }
@@ -41,14 +43,14 @@ function generatePassword() {
   var upperVal = prompt('Include uppercase characters?\nEnter "Yes" or "No"', 'Yes').toLowerCase();
   if (upperVal === null) {
     alert('Exiting program');
-    return 'Canceled password generator';
+    return cancelPhrase;
   } else {
     while (upperVal !== 'yes' && upperVal !== 'no') {
       alert('Invalid entry! Value must be "Yes" or "No"');
       var upperVal = prompt('Include uppercase characters?\nEnter "Yes" or "No"', 'Yes').toLowerCase();
       if (upperVal === null) {
         alert('Exiting program');
-        return 'Canceled password generator';
+        return cancelPhrase;
       }
     }
   }
@@ -56,14 +58,14 @@ function generatePassword() {
   var numVal = prompt('Include numbers?\nEnter "Yes" or "No"', 'Yes').toLowerCase();
   if (numVal === null) {
     alert('Exiting program');
-    return 'Canceled password generator';
+    return cancelPhrase;
   } else {
     while (numVal !== 'yes' && numVal !== 'no') {
       alert('Invalid entry! Value must be "Yes" or "No"');
       var numVal = prompt('Include numbers?\nEnter "Yes" or "No"', 'Yes').toLowerCase();
       if (numVal === null) {
         alert('Exiting program');
-        return 'Canceled password generator';
+        return cancelPhrase;
       }
     }
   }
@@ -71,14 +73,14 @@ function generatePassword() {
   var spcVal = prompt('Include special characters?\nEnter "Yes" or "No"', 'Yes').toLowerCase();
   if (spcVal === null) {
     alert('Exiting program');
-    return 'Canceled password generator';
+    return cancelPhrase;
   } else {
     while (spcVal !== 'yes' && spcVal !== 'no') {
       alert('Invalid entry! Value must be "Yes" or "No"');
       var spcVal = prompt('Include special characters?\nEnter "Yes" or "No"', 'Yes').toLowerCase();
       if (spcVal === null) {
         alert('Exiting program');
-        return 'Canceled password generator';
+        return cancelPhrase;
       }
     }
   }
@@ -86,7 +88,7 @@ function generatePassword() {
   if (lowerVal === 'no' && upperVal === 'no' && numVal === 'no' && spcVal === 'no') {
     return 'No password criteria selected'
   } else {
-    let passChar = '';
+    var passChar = '';
     if (lowerVal === 'yes') {
       passChar += 'abcdefghijklmnopqrstuvwxyz';
     }
