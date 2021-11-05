@@ -51,7 +51,7 @@ The user also has the option to exit the program by clicking _'Cancel'_ on any o
 ![exit-phrase-screen-shot]
 
 You can access the updated website at the following link:
-* [Deployed Application]()
+* [Deployed Application](https://hnava47.github.io/PasswordGeneratorH3/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
