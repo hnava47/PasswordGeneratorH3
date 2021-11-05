@@ -30,7 +30,7 @@ function generatePassword() {
   } else {
     while (lowerVal !== 'yes' && lowerVal !== 'no') {
       alert('Invalid entry! Value must be "Yes" or "No"');
-      var lowerVal = prompt('Include lowercase characters?\nEnter "Yes" or "No"', 'Yes');
+      var lowerVal = prompt('Include lowercase characters?\nEnter "Yes" or "No"', 'Yes').toLowerCase();
       if (lowerVal === null) {
         alert('Exiting program');
         return 'Canceled password generator';
@@ -45,7 +45,7 @@ function generatePassword() {
   } else {
     while (upperVal !== 'yes' && upperVal !== 'no') {
       alert('Invalid entry! Value must be "Yes" or "No"');
-      var upperVal = prompt('Include uppercase characters?\nEnter "Yes" or "No"', 'Yes');
+      var upperVal = prompt('Include uppercase characters?\nEnter "Yes" or "No"', 'Yes').toLowerCase();
       if (upperVal === null) {
         alert('Exiting program');
         return 'Canceled password generator';
@@ -60,7 +60,7 @@ function generatePassword() {
   } else {
     while (numVal !== 'yes' && numVal !== 'no') {
       alert('Invalid entry! Value must be "Yes" or "No"');
-      var numVal = prompt('Include numbers?\nEnter "Yes" or "No"', 'Yes');
+      var numVal = prompt('Include numbers?\nEnter "Yes" or "No"', 'Yes').toLowerCase();
       if (numVal === null) {
         alert('Exiting program');
         return 'Canceled password generator';
@@ -75,7 +75,7 @@ function generatePassword() {
   } else {
     while (spcVal !== 'yes' && spcVal !== 'no') {
       alert('Invalid entry! Value must be "Yes" or "No"');
-      var spcVal = prompt('Include special characters?\nEnter "Yes" or "No"', 'Yes');
+      var spcVal = prompt('Include special characters?\nEnter "Yes" or "No"', 'Yes').toLowerCase();
       if (spcVal === null) {
         alert('Exiting program');
         return 'Canceled password generator';
