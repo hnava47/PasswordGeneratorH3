@@ -21,7 +21,7 @@
 
 ## About The Project
 
-This project is meant to create and develop a personal portfolio page. This page contains information on my background, skill set, experience, and ways to contact me. The page is meant to be a view for potential clients and give representation on what it's like to work with me. Below is a snapshot of the current page:
+This project is meant to create and deploy a password generator page. This page contains a text area which is populated with a systematic generated password through JavaScript. The password generator takes into consideration criteria such has numbers and special characters. The page also has a _copy to clipboard_ option which allows a user to copy the created password. Below is a screenshot of the page:
 
 ![primary-screen-shot]
 
