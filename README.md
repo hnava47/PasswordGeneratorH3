@@ -14,6 +14,7 @@
     <summary>Table of Contents</summary>
     <ol>
         <li><a href="#about-the-project">About The Project</a></li>
+        <li><a href="#license">License</a></li>
         <li><a href="#contact">Contact</a></li>
     </ol>
 </details>
@@ -52,6 +53,11 @@ The user also has the option to exit the program by clicking _'Cancel'_ on any o
 
 You can access the updated website at the following link:
 * [Deployed Application](https://hnava47.github.io/PasswordGeneratorH3/)
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+## License
+Distributed under the MIT License. See `LICENSE` for more information.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
